@@ -1,24 +1,32 @@
-function addOutput (num) {
-    var display = document.getElementById("display");
-    display.value = display.value + num;
+var numberClicked = false;
+
+function add(char) {
+    if (numberClicked == false) {
+        if(isNaN(char) == true) {
+          document.getElementById('display').value ='';   
+        } else {
+            document.getElementById('display').value = display.value + char;
+        } 
+    } else {
+        document.getElementById('display').value = display.value + char;
+    }
+   
+    if (isNaN(char) == true) {
+        numberClicked = false;
+    }  else {
+        numberClicked = true;
+     } 
 }
 
 function calculate() {
-    var display = document.getElementById("display");
+    var display = document.getElementById('display');
     var result = eval(display.value);
-    var displayResult = document.getElementById("result");
-    displayResult.value = result;
-} 
+    document.getElementById('result').value = result;
+}
 
 function reset() {
-    var display = document.getElementById("display");
-    display.value = "";
-    var displayResult = document.getElementById("result");
-    displayResult.value = "";
 
+    document.getElementById('display').value ='';
+    document.getElementById('result').value ='';
 }
 
-function del() {
-    var display = document.getElementById("display");
-    display.value = display.value.substring(0, display.value.length-1);
-}

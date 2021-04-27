@@ -8,45 +8,48 @@
       </head>
  
       <body>
+        <table border="1">
+          <tr>
+            <td colspan="4">
+              <input type="text" id="display">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <input type="text" id="result">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" onclick="reset()">AC</td>
+            <td onclick="add('/')">/</td>
+          </tr>
+          <tr>
+            <td onclick="add(7)">7</td>
+            <td onclick="add(8)">8</td>
+            <td onclick="add(9)">9</td>
+            <td onclick="add('*')">*</td>
+          </tr>
+          <tr>
+            <td onclick="add(4)">4</td>
+            <td onclick="add(5)">5</td>
+            <td onclick="add(6)">6</td>
+            <td onclick="add('+')">+</td>
+          </tr>
+          <tr>
+            <td onclick="add(1)">1</td>
+            <td onclick="add(2)">2</td>
+            <td onclick="add(3)">3</td>
+            <td onclick="add('-')">-</td>
+          </tr>
+          <tr>
+            <td onclick="add(7)">0</td>
+            <td onclick="add(7)">00</td>
+            <td onclick="add('.')">.</td>
+            <td onclick="calculate()">=</td>
+          </tr>
+        </table>
         
-        <div>
-          <div class="calc-header">
-             <h2>계산식<input type="text" id="display"></h2> 
-             <h2>결과값<input type="text" id="result"></h2> 
-          </div>
-          <div>
-             <div class="buttonWrap">
-                <button onclick="addOutput('*')">*</button>
-                <button onclick="addOutput('+')">+</button>
-                <button onclick="addOutput('-')">-</button>
-                <button onclick="addOutput('/')">/</button>
-             </div>
-             <div class="buttonWrap">
-                <button onclick="addOutput('9')">9</button>
-                <button onclick="addOutput('8')">8</button>
-                <button onclick="addOutput('7')">7</button>
-                <button onclick="addOutput('.')">.</button>
-                
-             </div> 
-             <div class="buttonWrap">
-                <button onclick="addOutput('6')">6</button>
-                <button onclick="addOutput('5')">5</button>
-                <button onclick="addOutput('4')">4</button>
-                <button onclick="addOutput('00')">00</button>
-             </div>
-             <div class="buttonWrap">
-                <button onclick="addOutput('3')">3</button>
-                <button onclick="addOutput('2')">2</button>
-                <button onclick="addOutput('1')">1</button>
-                <button onclick="addOutput('0')">0</button>
-             </div> 
-             <div class="buttonWrap">
-                 <button onclick="reset()">AC</button>
-                 <button onclick="del()">DEL</button>
-                 <button onclick="calculate()">=</button>
-             </div>
-          </div>
-        </div>
+          
         
         
         <script src="main.js"></script>
